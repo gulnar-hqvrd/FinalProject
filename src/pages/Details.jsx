@@ -9,39 +9,39 @@ import ScrollToTop from "react-scroll-to-top";
 import QuickView from "../components/QuickView";
 import Login from "../components/Login";
 
-
 function Details({ dispatch, favorite }) {
   window.localStorage.setItem("favorite", JSON.stringify(favorite));
   const ref = useRef(null);
   const [login, setLogin] = useState(false);
   const ratingChanged = (newRating) => {};
   const { id } = useParams();
+  //   const [products, setProducts] = useState({});
   const [product, setProduct] = useState({});
   const [reviews, setReviews] = useState([]);
   const [related, setRelated] = useState([]);
   useEffect(() => {
-    let getProducts = async () => {
+    // `https://yuliyaa1404.github.io/json-api/database.json/products/${id}`;
+    let getProduct = async () => {
       let data = await fetch(`http://localhost:7700/products/${id}`).then((a) =>
         a.json()
       );
       setProduct(data);
     };
-    getProducts();
+    getProduct();
   }, []);
+  // console.log("Product" + product);
   useEffect(() => {
     let getReviews = async () => {
-      let reviewsData = await fetch(
-        `https://yuliyaa1404.github.io/json-api/database.json`
-      ).then((a) => a.json());
+      let reviewsData = await fetch().then((a) => a.json());
+      // `https://yuliyaa1404.github.io/json-api/database.json`;
       setReviews(reviewsData.reviews);
     };
     getReviews();
   }, []);
   useEffect(() => {
     let getRelated = async () => {
-      let relatedData = await fetch(
-        `https://yuliyaa1404.github.io/json-api/database.json`
-      ).then((a) => a.json());
+      let relatedData = await fetch().then((a) => a.json());
+      // `https://yuliyaa1404.github.io/json-api/database.json`;
       setRelated(relatedData.products);
     };
     getRelated();
@@ -49,19 +49,95 @@ function Details({ dispatch, favorite }) {
   const handleClick = () => {
     ref.current.scrollIntoView({ behavior: "smooth", block: "center" });
   };
-    useEffect(() => {
-      if (login) {
-        document.body.style.overflow = "hidden";
-      } else {
-        document.body.style.overflow = "unset";
-      }
-    }, [login]);
+  useEffect(() => {
+    if (login) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  }, [login]);
   return (
     <>
       <BasketIcon />
       <FavoritesIcon />
       <QuickView />
-		<Login login={login} setLogin={setLogin}/>
+      <Login login={login} setLogin={setLogin} />
+      {/* {products &&
+        products
+          .filter((t) => t.id == id)
+          .map((product) => {
+            return (
+              <section className="details">
+                <div className="details__head">
+                  <div className="details__left">
+                    <div className="details__title title">{product.name}</div>
+                    <div className="details__descriprion">
+                      {product.description}
+                    </div>
+                    <ul className="details__time">
+                      <li>
+                        <p>Hazırlama vaxtı</p>
+                        {product.prep_time} dəq
+                      </li>
+                      <li>
+                        <p>Bişirmə vaxtı</p>
+                        {product.cooking_time} dəq
+                      </li>
+                      <li>
+                        <p>Ümumi vaxt</p>
+                        {product.time} dəq
+                      </li>
+                    </ul>
+                    <div className="details__rating">
+                      {product.rating}/5
+                      <ReactStars
+                        count={5}
+                        onChange={ratingChanged}
+                        size={35}
+                        color2={"#ff6347"}
+                      />
+                    </div>
+                    <div
+                      onClick={handleClick}
+                      className="details__rating-reviews"
+                    >
+                      Şərhləri oxu<i className="fa-solid fa-caret-down"></i>
+                    </div>
+                    {!favorite.find((t) => t.id == product.id) ? (
+                      <div
+                        onClick={() =>
+                          dispatch({
+                            type: "ADD_TO_FAVORITES",
+                            payload: product,
+                          })
+                        }
+                        className="details__save btn-bg"
+                      >
+                        <i className="fa-solid fa-heart"></i>
+                        Resepti yadda saxla
+                      </div>
+                    ) : (
+                      <div
+                        onClick={() =>
+                          dispatch({
+                            type: "REMOVE_FROM_FAVORITES",
+                            payload: product.id,
+                          })
+                        }
+                        className="details__save btn-bg"
+                      >
+                        <i className="fa-solid fa-heart"></i>
+                        Resepti sil
+                      </div>
+                    )}
+                  </div>
+                  <div className="details__img">
+                    <img src={product.image} alt="" />
+                  </div>
+                </div>
+              </section>
+            );
+          })} */}
       <section className="details">
         <div className="details__head">
           <div className="details__left">
@@ -125,7 +201,6 @@ function Details({ dispatch, favorite }) {
             <img src={product.image} alt="" />
           </div>
         </div>
-        {/* </div> */}
       </section>
       <section className="energy">
         <div className="container">

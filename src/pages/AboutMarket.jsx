@@ -173,7 +173,7 @@ function AboutMarket() {
               <div className="steps__item">
                 <div className="steps__image">
                   <img
-                    src="https://img.foodpg.com/img/news/237/blue-apron-popular-meal-kit-delivery-service.jpg"
+                    src="https://takprosto.cc/wp-content/uploads/k/kak-gotovit-pechenye/3.jpg"
                     alt=""
                   />
                 </div>
@@ -203,13 +203,13 @@ function AboutMarket() {
                 </div>
                 <div className="steps__image2">
                   <img
-                    src="https://alltimelists.com/wp-content/uploads/2020/07/boil-vegetables.jpg"
+                    src="https://takprosto.cc/wp-content/uploads/u/urozhay-kabachkov/4.jpg"
                     alt=""
                   />
                 </div>
               </div>
             </div>
-            <div className="steps__row2">
+            {/* <div className="steps__row2">
               <div className="steps__item">
                 <div className="steps__body">
                   <h3 className="steps__subtitle subtitle">
@@ -262,7 +262,7 @@ function AboutMarket() {
                 </div>
                 <div className="steps__image">
                   <img
-                    src="https://img.foodpg.com/img/news/237/blue-apron-popular-meal-kit-delivery-service.jpg"
+                    src="zz"
                     alt=""
                   />
                 </div>
@@ -286,7 +286,7 @@ function AboutMarket() {
                   />
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

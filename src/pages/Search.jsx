@@ -40,17 +40,6 @@ function Search({ dispatch, searchValue }) {
                 type="text"
                 placeholder="Axtarış"
               />
-              <div
-                oclick={() => {
-                  dispatch({
-                    type: "SEARCH_VALUE",
-                    payload: 2,
-                  });
-                }}
-                className="filter__remove"
-              >
-                &times;
-              </div>
             </div>
           </div>
         </div>

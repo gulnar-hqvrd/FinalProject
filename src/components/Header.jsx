@@ -94,7 +94,7 @@ function Header(props, headerShow) {
             </NavLink>
             <ul className={scroll ? "header__menu scrolled" : "header__menu"}>
               <li>
-                <NavLink to="/taste-it">Ana səhifə</NavLink>
+                <NavLink to="/taste-it">Home</NavLink>
               </li>
               <li className="opened">
                 <NavLink to="/recipes">Reseptlər</NavLink>

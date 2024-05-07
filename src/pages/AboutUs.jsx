@@ -74,7 +74,10 @@ function AboutUs() {
             <div className="testing__row">
               <div className="testing__item">
                 <div className="testing__image">
-                  <img src="img/about_1.jpg" alt="" />
+                  <img
+                    src="https://sun9-2.userapi.com/c855120/v855120860/22bdbe/KySue3EqynY.jpg"
+                    alt=""
+                  />
                 </div>
                 <div className="testing__content">
                   <h5 className="testing__label label">
@@ -88,7 +91,10 @@ function AboutUs() {
               </div>
               <div className="testing__item">
                 <div className="testing__image">
-                  <img src="img/about_2.jpg" alt="" />
+                  <img
+                    src="https://aproduct22.ru/800/600/https/s.sakh.com/i/b/market/2016/05/04/d701223450b122f96407b561b30c5b6e.jpeg"
+                    alt=""
+                  />
                 </div>
                 <div className="testing__content">
                   <h5 className="testing__label label">İkincisi, dadlıdır?</h5>
@@ -100,7 +106,10 @@ function AboutUs() {
               </div>
               <div className="testing__item testing__item2">
                 <div className="testing__image">
-                  <img src="img/about_3.jpg" alt="" />
+                  <img
+                    src="https://i.pinimg.com/originals/30/7c/67/307c675c412a10889950cd4454f88d26.png "
+                    alt=""
+                  />
                 </div>
                 <div className="testing__content">
                   <h5 className="testing__label label">
@@ -122,7 +131,7 @@ function AboutUs() {
           </h1>
           <div className="quality__img">
             <img
-              src="https://dolgo-jv.ru/wp-content/uploads/2014/05/1-%D0%BE%D0%B2%D0%BE%D1%89%D0%B8-%D1%8F%D0%B3%D0%BE%D0%B4%D1%8B.jpg"
+              src="https://www.foodbusinessnews.net/ext/resources/TopicLandingPages/Product-Development-Ingredient-Applications.jpg?1519144948"
               alt=""
             />
             <h3 className="quality__subtitle">

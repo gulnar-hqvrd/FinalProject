@@ -10,7 +10,7 @@ import FavoritesIcon from "../components/FavoritesIcon";
 import QuickView from "../components/QuickView";
 import axios from "axios";
 
-function MainPage({ dispatch}) {
+function MainPage({ dispatch }) {
   const [inputValue, setInputValue] = useState("");
   const [modalSearch, setModalSearch] = useState(false);
   const [products, setProducts] = useState([]);
@@ -26,7 +26,7 @@ function MainPage({ dispatch}) {
       let dataCategory = await fetch(
         `https://yuliyaa1404.github.io/json-api/database.json`
       ).then((a) => a.json());
-      setMarketCategory(dataCategory.market-categories);
+      setMarketCategory(dataCategory.market - categories);
     };
     getMarketiCategory();
   }, []);
@@ -123,14 +123,10 @@ function MainPage({ dispatch}) {
           </h3>
           <div className="delicious__btns">
             <Link to="/recipes">
-              <p className="delicious__recipe btn-bg">
-                Reseptlər
-              </p>
+              <p className="delicious__recipe btn-bg">Reseptlər</p>
             </Link>
             <Link to="/market">
-              <p className="delicious__market btn-bg">
-                Market
-              </p>
+              <p className="delicious__market btn-bg">Market</p>
             </Link>
           </div>
         </div>
@@ -299,7 +295,7 @@ function MainPage({ dispatch}) {
           <h3 className="modal__first-title">Reseptləri necə hazırlayırıq?</h3>
           <div className="modal__first-img">
             <img
-              src="https://avatars.mds.yandex.net/get-zen_doc/3770780/pub_5f16c2caf3a8f4186213af21_5f16c2eda0fe8b6202b69562/scale_1200"
+              src="https://aproduct22.ru/800/600/https/s.sakh.com/i/b/market/2016/05/04/d701223450b122f96407b561b30c5b6e.jpeg"
               alt=""
             />
           </div>
@@ -309,7 +305,7 @@ function MainPage({ dispatch}) {
           </p>
           <div className="modal__first-img">
             <img
-              src="http://kurgan.besplatnee.net/storage/media/photos/adverts/528020/d2f836b65a95691b0bd323bc671b29b2.jpeg"
+              src="https://sun9-2.userapi.com/c855120/v855120860/22bdbe/KySue3EqynY.jpg "
               alt=""
             />
           </div>
@@ -382,7 +378,7 @@ function MainPage({ dispatch}) {
       </div>
       <section
         className="plan"
-      //   style={{ backgroundImage: `url(/img/main_banner_1.webp)` }}
+        //   style={{ backgroundImage: `url(/img/main_banner_1.webp)` }}
       >
         <div className="plan__content">
           <h2 className="plan__title">
@@ -442,9 +438,7 @@ function MainPage({ dispatch}) {
                       </Link>
                     </div>
                     <Link to={`/blog_details/${a.id}`}>
-                      <div className="news__name">
-                        {a.name}
-                      </div>
+                      <div className="news__name">{a.name}</div>
                     </Link>
                     <div className="news__subtitle">{a.subtitle}</div>
                   </div>

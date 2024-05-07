@@ -311,13 +311,11 @@ function Market({ dispatch, basket, peopleCount, dishCount, price }) {
                                 }}
                                 className="market__add"
                               >
+                                {" "}
                                 <i className="fa-solid fa-check"></i>
                               </button>
                             ) : (
                               <button
-                                style={{
-                                  background: "#005955",
-                                }}
                                 onClick={() => {
                                   dispatch({
                                     type: "REMOVE_FROM_BASKET",
@@ -328,9 +326,9 @@ function Market({ dispatch, basket, peopleCount, dishCount, price }) {
                                     payload: a.id,
                                   });
                                 }}
-                                className="market__add"
+                                className="market__remove"
                               >
-                                <i className="fa-solid fa-check"></i>
+                                <i className="fa-solid fa-xmark"></i>
                               </button>
                             )}
                           </div>
@@ -440,7 +438,13 @@ function Market({ dispatch, basket, peopleCount, dishCount, price }) {
                   <div className="panel__head">
                     <h1 className="panel__title title">{a.name}</h1>
                     <div
-                      onClick={() => setOpenPanel(false)}
+                      onClick={() => {
+                        dispatch({
+                          type: "HEADER_SHOW",
+                          payload: true,
+                        });
+                        setOpenPanel(false);
+                      }}
                       className="panel__close"
                     >
                       &times;

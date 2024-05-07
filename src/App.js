@@ -19,6 +19,7 @@ import BlogDetails from "./pages/BlogDetails";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import NotFound from "./pages/NotFound";
+import Registration from "./pages/Registration";
 function App() {
   let loc = useLocation();
   useEffect(() => {
@@ -45,7 +46,8 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog_details/:blogId" element={<BlogDetails />} />
-        {/* <Route path="*" element={<NotFound />} /> */}
+        <Route path="/registration" element={<Registration />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </>

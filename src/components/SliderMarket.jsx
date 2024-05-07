@@ -32,7 +32,7 @@ function SliderMarket({ market, favorite }) {
           spaceBetween={30}
           navigation={true}
           autoplay={{
-            delay: 1500,
+            delay: 2500,
             disableOnInteraction: false,
           }}
           modules={[Navigation, Autoplay]}

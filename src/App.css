@@ -2712,12 +2712,24 @@ body.dark .header__thumb {
   margin-bottom: 0;
 }
 .advice {
-  background-image: url("https://preview.colorlib.com/theme/vegefoods/images/xbg_3.jpg.pagespeed.ic.PrJrFBKJyM.webp");
+  background-image: url("https://i.pinimg.com/originals/6c/55/bb/6c55bb682541f51946025683440b8d10.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
   padding: 50px 0;
+  position: relative;
+  z-index: 1;
+}
+.advice::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.508);
+  z-index: -1;
 }
 .advice__wrapper {
   display: flex;
@@ -2725,9 +2737,11 @@ body.dark .header__thumb {
   justify-content: center;
   flex-direction: column;
   padding: 50px;
+  z-index: 2;
 }
 .advice__title {
   text-align: center !important;
+  
 }
 .advice__text {
   width: 50%;
@@ -2735,7 +2749,7 @@ body.dark .header__thumb {
   font-size: 18px;
   font-weight: 500;
   font-style: italic;
-  color: #424242;
+  color: #fff;
   line-height: 26px;
 }
 
@@ -3504,12 +3518,12 @@ body.dark .header__thumb {
   visibility: hidden;
   transition: 0.3s;
   z-index: 9;
-  pointer-events: none;
+  /* pointer-events: none; */
 }
 .filter__opened:hover .filter__dropdown {
   opacity: 1;
   visibility: visible;
-  pointer-events: all;
+  /* pointer-events: all; */
 }
 .filter__dropdown li {
   color: #222222 !important;
@@ -3810,12 +3824,6 @@ body.dark .header__thumb {
     border-radius: 20px;
     font-size: 20px;
     color: #708090;
-  }
-  .filter__remove {
-    position: absolute;
-    top: 28%;
-    right: 5%;
-    font-size: 34px;
   }
 
   .filter__title {
@@ -4874,6 +4882,7 @@ body.dark .header__thumb {
 }
 .market__add {
   background-color: #005955;
+  border: 2px solid #005955;
 }
 .market__add:hover {
   background-color: transparent;
@@ -4882,6 +4891,12 @@ body.dark .header__thumb {
 }
 .market__remove {
   background-color: #ff6347;
+  border: 2px solid #ff6347;
+}
+.market__remove:hover {
+  background-color: transparent;
+  border: 2px solid #ff6347;
+  color: #ff6347;
 }
 .error__wrapper {
   position: fixed;
@@ -7092,27 +7107,8 @@ body.dark .header__thumb {
   cursor: pointer;
 }
 .sign__sign {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 20px;
-  width: 100%;
-  height: 50px;
-  background-color: #005955 !important;
-  border-radius: 25px;
-  font-size: 15px;
-  color: #fff !important;
-  line-height: 1.2;
-  text-transform: uppercase;
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  transition: all 0.4s;
-  cursor: pointer;
 }
-.sign__sign:hover {
-  background-color: #1b3815 !important;
-}
+
 .sign__bottom {
   padding: 55px;
 }
@@ -7131,6 +7127,31 @@ body.dark .header__thumb {
   cursor: pointer;
   font-weight: 700;
   text-align: center;
+}
+.btn-sign {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  width: 100%;
+  height: 50px;
+  background-color: #005955 !important;
+  border: 2px solid #005955;
+  border-radius: 25px;
+  font-size: 15px;
+  color: #fff !important;
+  line-height: 1.2;
+  text-transform: uppercase;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+.btn-sign:hover {
+  background-color: transparent !important;
+  color: #005955 !important;
+  border: 2px solid #005955;
 }
 @media screen and (max-width: 768px) {
   .sign__item {
@@ -7196,7 +7217,7 @@ body.dark .header__thumb {
 }
 
 .lifestyle {
-  background-image: url("https://catherineasquithgallery.com/uploads/posts/2021-02/1612360588_134-p-fon-derevo-spetsii-255.jpg");
+  background-image: url("https://miro.medium.com/v2/resize:fit:850/0*jCCLa93GipBSyFBi.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -7408,7 +7429,7 @@ body.dark .header__thumb {
   background-image: url("https://lamyra.org/upload/medialibrary/ad2/qp71f3k83blojpmvgwx8zwz3i6zzwuln/green_fresh_vegetables_and_fruits_on_a_yellow_back_2021_10_21_03_49_02_utc.jpg");
   background-image: url("https://www.liebermanpllc.com/wp-content/uploads/2016/12/bigstock-Colored-Fruits-And-Vegetables-115593851.jpg");
   background-image: url("https://drkevinfarnam.com/wp-content/uploads/2020/12/How-are-food-challenges-performed-and-evaluated.png");
-  background-image: url("https://elb7r.com/wp-content/uploads/2021/10/203.jpg");
+  background-image: url("https://onefinefood.com/cdn/shop/files/Contact_Us_header_c22c42b4-a9e1-4cb2-99f0-0a57a032000b_1800x.png?v=1620760636");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -8321,4 +8342,95 @@ body.dark .header__thumb {
   .central-body {
     padding-top: 25%;
   }
+}
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #eeeeee;
+}
+.login__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login__welcome {
+  width: 327px;
+}
+.login__title {
+  margin-bottom: 76px;
+  text-align: center;
+}
+.login__mob input,
+.login__password input {
+  padding: 0 24px;
+  height: 48px;
+  width: 327px;
+  margin-bottom: 24px;
+  border-radius: 25px;
+}
+.login__mob {
+}
+.login__password {
+  position: relative;
+}
+.login__password-icon {
+  position: absolute;
+  top: 22%;
+  right: 5%;
+  cursor: pointer;
+}
+.login__forget {
+  margin-bottom: 40px;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: right;
+  letter-spacing: -0.005em;
+  color: #000000;
+  mix-blend-mode: normal;
+  opacity: 0.6;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.login__forget:hover {
+  color: #1c6e38;
+  opacity: 1;
+}
+.login__btn {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 50px;
+}
+.login__btn input {
+  opacity: 1;
+  border: none;
+  display: inline-block;
+  padding: 18px 76px;
+}
+.login__body {
+  height: 512px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 4px;
+  padding: 125px 103px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.login__label {
+  margin-bottom: 27px;
+}
+
+.login__payment {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.005em;
+  color: #1c6e38;
+}
+.login__password-repeat {
 }
